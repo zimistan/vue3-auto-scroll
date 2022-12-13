@@ -1,5 +1,8 @@
-import { createApp } from 'vue'
+import {Component, createApp} from 'vue'
 import './style.css'
 import App from './App.vue'
+import {autoScroll} from "./directive/autoScroll";
 
-createApp(App).mount('#app')
+const app = createApp(App)
+autoScroll(app)
+app.mount('#app')
